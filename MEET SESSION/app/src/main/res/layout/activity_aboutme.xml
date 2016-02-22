@@ -150,32 +150,6 @@
             android:ems="10"
             android:id="@+id/txtPeeves" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="The color of my hair is:"
-            android:id="@+id/colorText" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/colorButton"
-            android:layout_gravity="center_horizontal" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="The color of my eyes is:"
-            android:id="@+id/eyeText" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/eyeButton"
-            android:layout_gravity="center_horizontal" />
-
     </LinearLayout>
 
 </ScrollView>

@@ -11,7 +11,7 @@
         android:text="First Name"
         android:ems="10"
         android:id="@+id/firstText"
-        android:layout_marginBottom="67dp"
+        android:layout_marginBottom="47dp"
         android:layout_above="@+id/lastText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -23,10 +23,10 @@
         android:text="Last Name"
         android:ems="10"
         android:id="@+id/lastText"
+        android:layout_marginBottom="135dp"
         android:layout_above="@+id/newText"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="88dp" />
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="match_parent"
@@ -46,7 +46,7 @@
         android:ems="10"
         android:id="@+id/newText2"
         android:hint="Confirm password"
-        android:layout_above="@+id/Loginbutton2"
+        android:layout_above="@+id/nextButton"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="49dp" />
@@ -54,11 +54,26 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:id="@+id/Loginbutton2"
+        android:id="@+id/nextButton"
         android:layout_gravity="center_horizontal"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="#ec1de2" />
+        android:background="#ec1de2"
+        android:onClick="goToProfile"
+        android:nestedScrollingEnabled="true"
+        android:text="Next" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/emailView"
+        android:text="Email"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

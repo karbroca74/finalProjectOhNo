@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#809dc0"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Welcome!  Here is the first event for the week of April 1 - 8."
+        android:id="@+id/textView14"
+        style="@style/TextAppearance.AppCompat.Headline" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="RE:          BARBEQUE"
+        android:id="@+id/bbqView"
+        android:layout_marginTop="20dp"
+        android:textColor="#f90606" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="TIME:      2 PM"
+        android:id="@+id/timeView"
+        android:layout_marginTop="10dp"
+        android:textColor="#f90606" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="WHERE:  St. Anthony&apos;s Parish"
+        android:id="@+id/textView2"
+        android:layout_marginTop="10dp"
+        android:textColor="#f90606" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="                603 Union St."
+        android:id="@+id/addressView"
+        android:textColor="#f90606" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="                Fredericton, NB"
+        android:id="@+id/textView15"
+        android:textColor="#f90606" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="                E3A 3N5"
+        android:id="@+id/textView16"
+        android:textColor="#f90606" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:id="@+id/button7"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="220dp"
+        android:background="#ec1de2" />
+
+</LinearLayout>
