@@ -2,7 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#809dc0">
+    android:background="#809dc0"
+    android:padding="10dp"
+    android:onClick="goToViewProfiles">
 
     <TextView
         android:layout_width="wrap_content"
@@ -88,12 +90,12 @@
         android:id="@+id/textView11" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="131dp"
         android:layout_height="wrap_content"
-        android:text="Search"
-        android:id="@+id/searchButton"
+        android:text="Start Matching"
+        android:id="@+id/matchButton"
         android:layout_gravity="center_horizontal"
         android:background="#ec1de2"
-        android:layout_marginTop="80dp" />
+        android:onClick="goToViewProfiles" />
 
 </LinearLayout>

@@ -1,6 +1,7 @@
-package com.karrye.meetsession;
+package com.karrye.meetsession.activities;
 
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -8,6 +9,10 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+
+import com.karrye.meetsession.PagerFragment;
+import com.karrye.meetsession.R;
 
 public class TabActivity extends AppCompatActivity {
     public static final String START_TAB = "START TAB";
@@ -61,19 +66,31 @@ public class TabActivity extends AppCompatActivity {
         }
         try{
             int startTab = getIntent().getExtras().getInt(START_TAB);
-            getSupportActionBar().setSelectedNavigationItem(startTab);
-            viewPager.setCurrentItem(startTab);
+            goToTab(startTab);
         }catch (Exception ex){}
 
     }
-
+    private void goToTab(int tabNumber){
+        getSupportActionBar().setSelectedNavigationItem(tabNumber);
+        viewPager.setCurrentItem(tabNumber);
+    }
+    public void goToAboutDate(View v){
+        goToTab(1);
+    }
+    public void goToSummary(View v){
+        goToTab(2);
+    }
+    public void goToMatches(View v){
+        Intent matchesIntent = new Intent(TabActivity.this,MatchesActivity.class);
+        startActivity(matchesIntent);
+    }
 }
 
 class TabPagerAdapter extends FragmentPagerAdapter{
     private static int[] tabLayoutIds = {
-            R.layout.activity_aboutme,
-            R.layout.activity_aboutdate,
-            R.layout.activity_premiumusers
+            R.layout.fragment_aboutme,
+            R.layout.fragment_aboutdate,
+            R.layout.fragment_inmyownwords
     };
 
     private static String[] tabNames = {

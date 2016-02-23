@@ -1,10 +1,11 @@
-package com.karrye.meetsession;
+package com.karrye.meetsession.activities;
 
 import android.content.Intent;
-import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.karrye.meetsession.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,16 +18,11 @@ public class MainActivity extends AppCompatActivity {
         Intent registerIntent = new Intent(MainActivity.this,RegisterActivity.class);
         startActivity(registerIntent);
     }
-    public void goToQuestionnaire(View v){
-        Intent questionnaireIntent = new Intent(MainActivity.this,QuestionnaireActivity.class);
-        startActivity(questionnaireIntent);
-    }
-    public void goToProfile(View v){
-        Intent profileIntent = new Intent(MainActivity.this,TabActivity.class);
-        startActivity(profileIntent);
-    }
+
     public void goToSearch(View v){
-        Intent searchIntent = new Intent()
+        Intent searchIntent = new Intent(MainActivity.this,SearchActivity.class);
+
+        startActivity(searchIntent);
     }
 
 

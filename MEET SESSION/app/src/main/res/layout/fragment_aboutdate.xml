@@ -2,13 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#809dc0">
+    android:background="#809dc0"
+    android:padding="10dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="What&apos;s his body type?"
+        android:text="What&apos;s their body type?"
         android:id="@+id/bodyView" />
 
     <EditText
@@ -20,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="How tall is he?"
+        android:text="How tall are they?"
         android:id="@+id/tallView" />
 
     <EditText
@@ -32,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="What&apos;s his ethnicity?"
+        android:text="What&apos;s their ethnicity?"
         android:id="@+id/ethnicView" />
 
     <EditText
@@ -44,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="What&apos;s his relationship status?"
+        android:text="What&apos;s their relationship status?"
         android:id="@+id/statusView2" />
 
     <EditText
@@ -56,7 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Does he smoke?"
+        android:text="Do they smoke?"
         android:id="@+id/smokeView" />
 
     <EditText
@@ -77,5 +78,13 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/editText14" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:id="@+id/button8"
+        android:layout_gravity="center_horizontal"
+        android:onClick="goToSummary" />
 
 </LinearLayout>

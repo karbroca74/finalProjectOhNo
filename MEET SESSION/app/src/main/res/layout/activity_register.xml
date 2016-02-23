@@ -2,7 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#809dc0">
+    android:background="#809dc0"
+    android:padding="10dp"
+    android:onClick="goToMatches">
 
     <EditText
         android:layout_width="match_parent"
@@ -59,7 +61,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="#ec1de2"
-        android:onClick="goToProfile"
+        android:onClick="goToAboutMe"
         android:nestedScrollingEnabled="true"
         android:text="Next" />
 
