@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#809dc0">
+    android:background="#809dc0"
+    android:onClick="goToMatches">
 
     <TextView
         android:layout_width="wrap_content"
@@ -10,7 +11,8 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="As premium members, you have access to upcoming events that are taking place around you.  "
         android:id="@+id/textView12"
-        style="@style/TextAppearance.AppCompat.Headline" />
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_marginLeft="5dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -21,7 +23,8 @@
         android:layout_below="@+id/textView12"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="47dp" />
+        android:layout_marginTop="47dp"
+        android:layout_marginLeft="10dp" />
 
     <Button
         android:layout_width="116dp"
@@ -61,9 +64,10 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back"
-        android:id="@+id/backButton"
+        android:text="Next"
+        android:id="@+id/button11"
+        android:onClick="goToMessageBoard"
+        android:background="#ec1de2"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="#ec1de2" />
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

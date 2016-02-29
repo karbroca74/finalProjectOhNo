@@ -3,7 +3,8 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#809dc0"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:onClick="goToSearch">
 
     <TextView
         android:layout_width="wrap_content"
@@ -64,13 +65,28 @@
         android:id="@+id/textView16"
         android:textColor="#f90606" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        android:id="@+id/button7"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="220dp"
-        android:background="#ec1de2" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign out"
+            android:id="@+id/button7"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Help"
+            android:id="@+id/button17"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="goToHelp" />
+    </RelativeLayout>
 
 </LinearLayout>

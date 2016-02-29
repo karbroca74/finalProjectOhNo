@@ -12,15 +12,12 @@ import com.karrye.meetsession.R;
  */
 public class SearchActivity extends AppCompatActivity {
     @Override
-
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
     }
-
-    public void goToViewProfiles(View v) {
-        Intent searchIntent = new Intent(SearchActivity.this,MatchesActivity.class);
-        startActivity(searchIntent);
+    public void goToMatches(View v) {
+        Intent matchesIntent = new Intent(SearchActivity.this,MatchesActivity.class);
+        startActivity(matchesIntent);
     }
 }

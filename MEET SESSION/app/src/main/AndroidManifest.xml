@@ -20,6 +20,11 @@
         <activity android:name=".activities.RegisterActivity"/>
         <activity android:name=".activities.ProfileActivity"/>
         <activity android:name=".activities.SearchActivity"/>
+        <activity android:name=".activities.MatchesActivity"/>
+        <activity android:name=".activities.BecomeAPremiumUserActivity"/>
+        <activity android:name=".activities.HelpActivity"/>
+        <activity android:name=".activities.MessageBoardActivity"/>
+
     </application>
 
 </manifest>

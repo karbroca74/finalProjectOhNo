@@ -6,16 +6,19 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.karrye.meetsession.R;
+
 /**
- * Created by student on 2016-02-23.
+ * Created by student on 2016-02-24.
  */
-public class InMyOwnWordsActivity extends AppCompatActivity {
+public class HelpActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_help);
     }
-    public void goToMatches(View v){
-        Intent matchesIntent = new Intent(InMyOwnWordsActivity.this,MatchesActivity.class);
-        startActivity(matchesIntent);
+
+    public void goBack(View v) {
+        finish();
     }
 }

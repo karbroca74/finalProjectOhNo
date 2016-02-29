@@ -80,9 +80,9 @@ public class TabActivity extends AppCompatActivity {
     public void goToSummary(View v){
         goToTab(2);
     }
-    public void goToMatches(View v){
-        Intent matchesIntent = new Intent(TabActivity.this,MatchesActivity.class);
-        startActivity(matchesIntent);
+    public void goToSearch(View v){
+        Intent searchIntent = new Intent(TabActivity.this,SearchActivity.class);
+        startActivity(searchIntent);
     }
 }
 

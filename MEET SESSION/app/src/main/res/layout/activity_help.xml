@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#809dc0">
+    android:background="#809dc0"
+    android:onClick="goToMatches">
 
     <TextView
         android:layout_width="wrap_content"
@@ -12,14 +13,6 @@
         android:id="@+id/questionView"
         android:textColor="#f90606"
         style="@style/TextAppearance.AppCompat.Headline" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="How do I view more searches?"
-        android:id="@+id/txtQuestion1"
-        android:layout_marginTop="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -44,4 +37,30 @@
         android:text="How do I become a premium member?"
         android:id="@+id/txtQuestion4"
         android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="How to deactivate my subscription."
+        android:id="@+id/textView19"
+        android:layout_marginTop="10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="goToSearch">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back "
+            android:id="@+id/button14"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dp"
+            android:onClick="goBack" />
+    </RelativeLayout>
+
 </LinearLayout>
