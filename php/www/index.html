@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Cross-platformAss4</title>
+    <link rel="stylesheet" href="css/cpAss4.css"/>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <div data-role="page" id="login">
+        <div data-role="content">
+            <input id="loginusername" placeholder="username">
+            <input id="loginpassword" placeholder="password" type="password">
+            <button onclick="login()">Login</button>
+            <div>
+                Need an account?
+                <a href="#register">Register</a>
+            </div>
+        </div>
+    </div>
+    <div data-role="page" id="message">
+        <div data-role="content">
+            <div  id="scrollArea">
+                <ul id="messageArea"></ul>
+            </div>
+            <div id="messageButtons">
+                <input id="messageBox" type="text" name="message" placeholder="Type a message">
+                <button onclick="send()">Send</button>
+                <button onclick="logout()">Logout</button>
+            </div>
+            
+        </div>
+    </div>
+   
+    <div data-role="page" id="register">
+        <div data-role="content">
+            <input id="username" placeholder="username" >
+            <input id="password" placeholder="password" type="password">
+            <input id="regConf" placeholder="password confirm" type="password"><br>
+            <button onclick="register()">Register</button>
+        </div>
+    </div>
+    
+</body>
+</html>

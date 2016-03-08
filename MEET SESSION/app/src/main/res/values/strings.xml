@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MEET SESSION</string>
+    <string name="email">Email</string>
+    <string name="Password">Password</string>
+    <string name="button_login">LOGIN</string>
+    <string name="edit_text">Don\'t have an account yet?</string>
+    <string name="button_register">REGISTER</string>
 </resources>

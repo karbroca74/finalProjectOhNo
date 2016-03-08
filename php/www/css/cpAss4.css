@@ -1,0 +1,16 @@
+/*using css i designed some styles to the things listed here*/
+#messageArea{
+    width:200px;
+    text-align: left;
+}
+div#scrollArea{
+    border: solid;
+    margin: auto;
+    overflow-y: scroll;
+    background-color: white;
+}
+#messageBox{
+    width:500px;
+   
+    
+}
