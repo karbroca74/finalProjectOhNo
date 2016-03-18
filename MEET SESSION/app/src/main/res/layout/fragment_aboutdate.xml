@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#809dc0"
-    android:padding="10dp">
+    android:padding="10dp"
+    android:id="@+id/fragment_aboutdate">
 
     <LinearLayout
         android:orientation="vertical"
@@ -14,13 +15,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="What&apos;s their body type?"
+            android:text="What is their body type?"
             android:id="@+id/bodyView" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtBody" />
+            android:id="@+id/txtBody"
+            android:text="doesnt matter" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -32,31 +34,34 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtHeight" />
+            android:id="@+id/txtHisHeight"
+            android:text="taller than me" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="What&apos;s their ethnicity?"
+            android:text="What is their ethnicity?"
             android:id="@+id/ethnicView" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtEthnicity" />
+            android:id="@+id/txtEthnicity"
+            android:text="doesnt matter" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="What&apos;s their relationship status?"
+            android:text="What is their relationship status?"
             android:id="@+id/statusView2" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/editText12" />
+            android:id="@+id/txtStatus"
+            android:text="single" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -68,7 +73,8 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/editText13" />
+            android:id="@+id/txtSmoke"
+            android:text="doesnt matter" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -82,7 +88,8 @@
             android:layout_height="wrap_content"
             android:inputType="number"
             android:ems="10"
-            android:id="@+id/editText14" />
+            android:id="@+id/txtAge"
+            android:text="old" />
 
         <Button
             android:layout_width="wrap_content"

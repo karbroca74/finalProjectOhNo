@@ -1,27 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#809dc0"
     android:weightSum="1"
-    android:onClick="goToMatches">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Your headline is an excellent way to catch the attention of other users.  It is displayed at the top of your profile in the search results."
-        android:id="@+id/textView17"
-        android:layout_marginTop="10dp"
-        style="@style/TextAppearance.AppCompat.Headline"
-        android:textColor="#f50505" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:id="@+id/editText6" />
+    android:id="@+id/fragment_inmyownwords">
 
     <TextView
         android:layout_width="wrap_content"
@@ -35,7 +18,12 @@
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
-        android:id="@+id/editText7" />
+        android:id="@+id/txtWords"
+        android:layout_below="@+id/textView18"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="48dp"
+        android:text="friday will soon be here!!" />
 
     <Button
         android:layout_width="wrap_content"
@@ -43,6 +31,8 @@
         android:text="Next"
         android:id="@+id/button9"
         android:layout_gravity="center_horizontal"
-        android:onClick="goToSearch" />
+        android:onClick="goToSearch"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
-</LinearLayout>
+</RelativeLayout>

@@ -2,7 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#809dc0">
+    android:background="#809dc0"
+    android:id="@+id/fragment_aboutme">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,92 +22,93 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="1.  Which city are you from?"
+            android:text="Which city are you from?"
             android:id="@+id/questView1"
             android:layout_marginTop="26dp" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtCity"/>
+            android:id="@+id/txtCity"
+            android:text="fred" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="2.  Are you single, married, divorced, widowed or never been married?"
-            android:id="@+id/statusView" />
+            android:text="What gender are you?"
+            android:id="@+id/textView5" />
 
-        <EditText
+        <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textStatus" />
+            android:id="@+id/spinGender"
+            android:spinnerMode="dialog"
+            android:layout_gravity="center_horizontal"
+            android:entries="@array/array_gender"
+            android:contextClickable="true" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="3.  How tall are you?"
+            android:text="Are you single, married, divorced, widowed or never been married?"
+            android:id="@+id/statusView" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinStatus"
+            android:layout_gravity="center_horizontal"
+            android:spinnerMode="dialog"
+            android:entries="@array/array_status" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="How tall are you?"
             android:id="@+id/heightView" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtHeight" />
+            android:id="@+id/txtHeight"
+            android:text=" 5&apos;7" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="4.  Are you a smoker?"
-            android:id="@+id/smokeText" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/txtSmoke" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="5.  How old are you?"
+            android:text="How old are you?"
             android:id="@+id/ageText" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtAge" />
+            android:inputType="number"
+            android:id="@+id/txtMyAge"
+            android:text="33" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="6.  Who would be your ideal celebrity crush?"
-            android:id="@+id/crushText" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/txtCrush" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="7.  How long was your longest relationship?"
+            android:text="How long was your longest relationship?\n(In years)"
             android:id="@+id/relationshipText" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtRelationship" />
+            android:id="@+id/txtRelationship"
+            android:inputType="number"
+            android:text="5" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="8.  List some things you enjoy doing?"
+            android:text="List some things you enjoy doing?"
             android:id="@+id/doingText" />
 
         <TextView
@@ -120,13 +122,14 @@
             android:layout_height="wrap_content"
             android:inputType="textMultiLine"
             android:ems="10"
-            android:id="@+id/txtEnjoy" />
+            android:id="@+id/txtEnjoy"
+            android:text="reading, poker" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="9.  List some characteristics you like in a partner."
+            android:text="List some characteristics you like in a partner."
             android:id="@+id/characteristicsText" />
 
         <EditText
@@ -134,21 +137,8 @@
             android:layout_height="wrap_content"
             android:inputType="textMultiLine"
             android:ems="10"
-            android:id="@+id/txtCharacteristics" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="10.  List any pet peeves you may have."
-            android:id="@+id/peeveText" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textMultiLine"
-            android:ems="10"
-            android:id="@+id/txtPeeves" />
+            android:id="@+id/txtCharacteristics"
+            android:text="has to be a man" />
 
         <Button
             android:layout_width="wrap_content"

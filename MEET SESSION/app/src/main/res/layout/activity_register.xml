@@ -3,32 +3,47 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#809dc0"
-    android:padding="10dp"
-    android:onClick="goToAboutMe">
+    android:padding="10dp">
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="First Name"
         android:ems="10"
         android:id="@+id/txtFirst"
         android:layout_alignParentTop="true"
         android:layout_marginTop="71dp"
         android:layout_alignRight="@+id/txtLast"
-        android:layout_alignEnd="@+id/txtLast" />
+        android:layout_alignEnd="@+id/txtLast"
+        android:hint="First Name"
+        android:text="Karrye" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Last Name"
         android:ems="10"
         android:id="@+id/txtLast"
         android:layout_below="@+id/txtFirst"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="34dp" />
+        android:layout_marginTop="34dp"
+        android:hint="Last Name"
+        android:text="Brooks" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/txtEmail"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:hint="Email"
+        android:text="karbroca42@gmail.com" />
 
     <EditText
         android:layout_width="match_parent"
@@ -39,7 +54,8 @@
         android:hint="Password"
         android:layout_above="@+id/txtConfirm"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:text="password" />
 
     <EditText
         android:layout_width="match_parent"
@@ -51,7 +67,8 @@
         android:layout_above="@+id/nextButton"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="49dp" />
+        android:layout_marginBottom="49dp"
+        android:text="password" />
 
     <Button
         android:layout_width="wrap_content"
@@ -59,34 +76,10 @@
         android:id="@+id/nextButton"
         android:layout_gravity="center_horizontal"
         android:background="#ec1de2"
-        android:onClick="register"
+        android:onClick="goToAboutDate"
         android:nestedScrollingEnabled="true"
         android:text="Next"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/txtConfirm"
-        android:layout_alignEnd="@+id/txtConfirm" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/txtPassword"
-        android:text="Email"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Submit"
-        android:id="@+id/subButton"
-        android:layout_alignBottom="@+id/nextButton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="register" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

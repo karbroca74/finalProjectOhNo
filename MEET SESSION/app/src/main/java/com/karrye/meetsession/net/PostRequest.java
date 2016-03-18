@@ -53,7 +53,6 @@ public class PostRequest {
                 HttpConnectionParams.setConnectionTimeout(params,10000);
 
                 try {
-                    //String link = "server.php";
                     client = new DefaultHttpClient(params);
                     post = new HttpPost(C.SERVER);
                     post.setEntity(new UrlEncodedFormEntity(sentData));
