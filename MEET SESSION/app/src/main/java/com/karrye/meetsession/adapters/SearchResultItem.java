@@ -6,11 +6,13 @@ package com.karrye.meetsession.adapters;
 public class SearchResultItem {
     private int userId;
     private String name;
+    private String city;
     private int age;
 
-    public SearchResultItem(int userId_,String name_, int age_){
+    public SearchResultItem(int userId_,String name_,String city_, int age_){
         this.userId = userId_;
         this.name = name_;
+        this.city = city_;
         this.age = age_;
     }
 
@@ -28,6 +30,14 @@ public class SearchResultItem {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 
     public int getAge() {

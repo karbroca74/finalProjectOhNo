@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="I would like my matches to be in the age range of"
+        android:text="Between the ages of"
         android:id="@+id/textView9" />
 
     <EditText
@@ -51,13 +51,6 @@
         android:id="@+id/txtMaxAge"
         android:layout_gravity="center_horizontal" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="years."
-        android:id="@+id/textView11" />
-
     <Button
         android:layout_width="131dp"
         android:layout_height="wrap_content"
@@ -65,6 +58,6 @@
         android:id="@+id/Button"
         android:layout_gravity="center_horizontal"
         android:background="#ec1de2"
-        android:onClick="goToMatches" />
+        android:onClick="search" />
 
 </LinearLayout>

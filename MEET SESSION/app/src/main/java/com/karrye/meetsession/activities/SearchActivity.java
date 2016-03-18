@@ -47,24 +47,23 @@ public class SearchActivity extends AppCompatActivity implements ServerResponse 
                     Log.e("RESPONSE", response);
                     try{
                         JSONObject json = new JSONObject(response);
-                        if(json.getBoolean("success")){
-                            SharedPreferences.Editor editor=
+                        if(json.getBoolean("success")) {
+                            SharedPreferences.Editor editor =
                                     getSharedPreferences(C.PREFS, Context.MODE_PRIVATE).edit();
-                            editor.putInt(C.PREF_USER_ID,json.getInt(C.PREF_USER_ID));
+                            editor.putString(C.PREF_RESULTS, json.getJSONArray(C.PREF_RESULTS).toString());
                             editor.commit();
 
                             Intent matchesIntent = new Intent(SearchActivity.this,MatchesActivity.class);
                             startActivity(matchesIntent);
                         }
 
-                    }catch (JSONException ex){}
+                    }catch (JSONException ex){
+                        Log.e("JSON-PARSE",ex.getMessage());
+                        ex.printStackTrace();
+                    }
                 }
 
             });
-        }
-        public void goToMatches(View v){
-            Intent matchesIntent = new Intent(SearchActivity.this, MatchesActivity.class);
-            startActivity(matchesIntent);
         }
 
     }

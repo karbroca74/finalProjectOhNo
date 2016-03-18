@@ -111,26 +111,34 @@ function personalInfo(){
         echo "failed";
         echo json_encode($stm->errorInfo());
     }
-    
-    function search(){
-        require('db.php');
-        $con = dbConnect();
-        $query = "INSERT INTO Personal_info(my_gender,their_gender,kilometres,min_age,max_age)VALUES(:my_gender,:their_gender,:kilometres,
-                :min_age,:max_age)";
-        $stm = $con->prepare($query);
-        $stm->bindValue(':my_gender', $_POST['my_gender'],PDO::PARAM_STR);
-        $stm->bindValue(':their_gender', $_POST['their_gender'],PDO::PARAM_STR);
-        $stm->bindValue(':kilometres', $_POST['kilometres'],PDO::PARAM_STR);
-        $stm->bindValue(':min_age', $_POST['min_age'],PDO::PARAM_INT);
-        $stm->bindValue(':max_age', $_POST['max_age'],PDO::PARAM_INT);
-        if($stm->execute()){
-            echo "success";
-        }else{
-            echo "failed";
-            echo json_encode($stm->errorInfo());
-        }
-    }
-    
 }
+    
+function search(){
+    require('db.php');
+    $con = dbConnect();
+    $query = "  SELECT my_words,user_id,email,city,my_age,my_height
+                FROM MEET_SESSION.Personal_info
+                WHERE
+                    my_gender=:their_gender AND
+                    my_age >= :min_age AND my_age <= :max_age;";
+    $stm = $con->prepare($query);
+    $stm->bindValue(':their_gender', $_POST['their_gender'],PDO::PARAM_STR);
+    $stm->bindValue(':min_age', $_POST['min_age'],PDO::PARAM_INT);
+    $stm->bindValue(':max_age', $_POST['max_age'],PDO::PARAM_INT);
+    $res = new stdClass();
+    //executes the statement
+    if($stm->execute()){
+        $res->success = true;
+        $res->results = array();
+        while($row = $stm->fetch(PDO::FETCH_ASSOC)){
+            array_push($res->results,$row);
+        }
+    }else{
+        $res->success = false;
+        $res->message = $stm->errorInfo();
+    }
+    echo json_encode($res);
+}
+    
 
 ?>

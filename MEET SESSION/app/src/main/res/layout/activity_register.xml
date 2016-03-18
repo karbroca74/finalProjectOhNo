@@ -76,7 +76,7 @@
         android:id="@+id/nextButton"
         android:layout_gravity="center_horizontal"
         android:background="#ec1de2"
-        android:onClick="goToAboutDate"
+        android:onClick="register"
         android:nestedScrollingEnabled="true"
         android:text="Next"
         android:layout_alignParentBottom="true"

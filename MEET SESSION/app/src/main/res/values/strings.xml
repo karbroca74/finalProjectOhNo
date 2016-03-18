@@ -1,5 +1,5 @@
 <resources>
-
+    <string name="paypal">PayPal.ca</string>
     <string name="app_name">MEET SESSION</string>
     <string-array name="array_gender">
         <item>Male</item>
@@ -10,5 +10,6 @@
         <item>married</item>
         <item>divorced</item>
         <item>widowed</item>
+
     </string-array>
 </resources>

@@ -16,6 +16,7 @@ import com.karrye.meetsession.adapters.SearchAdapter;
 import com.karrye.meetsession.adapters.SearchResultItem;
 import com.karrye.meetsession.net.ServerResponse;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -35,9 +36,24 @@ public class MatchesActivity extends AppCompatActivity implements ServerResponse
         setContentView(R.layout.activity_matches);
 
         searchResults = new ArrayList<>();
-        searchResults.add(new SearchResultItem(1,"Bob the builder",5));
-        searchResults.add(new SearchResultItem(2,"Hunky Monkey",50));
-        searchResults.add(new SearchResultItem(3,"Quatre Winner",25));
+
+        SharedPreferences prefs = getSharedPreferences(C.PREFS, Context.MODE_PRIVATE);
+
+        try{
+            JSONArray results = new JSONArray(prefs.getString(C.PREF_RESULTS,"[]"));
+            for(int i=0; i<results.length(); i++){
+                JSONObject result = results.getJSONObject(i);
+                int userId = result.getInt("user_id");
+                String myWords = result.getString("my_words");
+                String city = result.getString("city");
+                int age = result.getInt("my_age");
+                searchResults.add(new SearchResultItem(userId,myWords,city,age));
+            }
+        }catch (JSONException ex){
+            Log.e("JSON-PARSE",ex.getMessage());
+            ex.printStackTrace();
+        }
+
 
         searchList = (ListView)findViewById(R.id.listResults);
         searchAdapter = new SearchAdapter(MatchesActivity.this,searchResults);
@@ -70,5 +86,10 @@ public class MatchesActivity extends AppCompatActivity implements ServerResponse
     public void goToBecomeAPremiumUser(View v){
         Intent becomeAPremiumUserIntent = new Intent(MatchesActivity.this, BecomeAPremiumUserActivity.class);
         startActivity(becomeAPremiumUserIntent);
+    }
+    public void logout(View v){
+        Intent backToMain = new Intent(MatchesActivity.this,MainActivity.class);
+        backToMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(backToMain);
     }
 }

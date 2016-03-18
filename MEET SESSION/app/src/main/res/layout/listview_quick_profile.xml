@@ -51,4 +51,14 @@
         android:layout_alignParentEnd="true"
         android:layout_alignLeft="@+id/button15"
         android:layout_alignStart="@+id/button15" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="City: there"
+        android:id="@+id/txtCity"
+        android:layout_below="@+id/txtAge"
+        android:layout_toRightOf="@+id/imageView5"
+        android:layout_toEndOf="@+id/imageView5" />
 </RelativeLayout>

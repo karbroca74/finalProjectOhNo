@@ -7,4 +7,6 @@ public class C {
     public static final String SERVER = "http://192.168.0.12/meet/server.php";
     public static final String PREFS = "MEET_PREFS";
     public static final String PREF_USER_ID = "user_id";
+    public static final String PREF_RESULTS = "results";
 }
+

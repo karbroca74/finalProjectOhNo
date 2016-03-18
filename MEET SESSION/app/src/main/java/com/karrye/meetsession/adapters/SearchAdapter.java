@@ -39,9 +39,11 @@ public class SearchAdapter extends ArrayAdapter<SearchResultItem> {
 
         TextView txtName = (TextView)view.findViewById(R.id.txtName);
         TextView txtAge = (TextView)view.findViewById(R.id.txtAge);
+        TextView txtCity = (TextView)view.findViewById(R.id.txtCity);
 
         txtName.setText(item.getName());
         txtAge.setText("Age: " + item.getAge());
+        txtCity.setText("City: " + item.getCity());
 
         return view;
     }

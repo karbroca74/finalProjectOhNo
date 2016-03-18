@@ -28,5 +28,12 @@ public class MessageBoardActivity extends AppCompatActivity {
         Intent helpIntent = new Intent(MessageBoardActivity.this, HelpActivity.class);
         startActivity(helpIntent);
     }
+
+    public void logout(View v) {
+        Intent backToMain = new Intent(MessageBoardActivity.this, MainActivity.class);
+        backToMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(backToMain);
+    }
 }
+
 
